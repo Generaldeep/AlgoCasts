@@ -8,6 +8,23 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+function chunk(array, size) {
+    const chunked = [];
+    let counter = 0;
+
+    while (counter < array.length) {
+        chunked.push(array.slice(counter, counter+size));
+        counter += size;
+    }
+
+    return chunked;
+}
+
+/*
+Not my solution above, it's Griders. But I like it. It takes advantage of the array
+slice method. We have container called chunked to which we are pushing sliced elements. 
+Slice returns an array, so the inner container is a sub array already. To the subarray
+we are adding elements starting from the counter (index value) to counter + size
+*/
 
 module.exports = chunk;

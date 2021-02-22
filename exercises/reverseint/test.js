@@ -6,6 +6,7 @@ test('ReverseInt function exists', () => {
 
 test('ReverseInt handles 0 as an input', () => {
   expect(reverseInt(0)).toEqual(0);
+  expect(reverseInt(50)).toEqual(5);
 });
 
 test('ReverseInt flips a positive number', () => {
