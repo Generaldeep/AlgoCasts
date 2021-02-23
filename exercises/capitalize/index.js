@@ -8,14 +8,14 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-    const splitStr = str.split(' ');
-    const mappedStr = [];
+    const splitStrByEachLetter = str.split(' ');
+    const newStringContainer = [];
     
-    for (let char of splitStr) {
-        const firstLetter = char[0].toUpperCase();
-        mappedStr.push(firstLetter + char.substring(1, char.length));
+    for (let char of splitStrByEachLetter) {
+        const capitalizeFirstLetter = char[0].toUpperCase();
+        newStringContainer.push(capitalizeFirstLetter + char.slice(1, char.length));
     }
-    return mappedStr.join(' ');
+    return newStringContainer.join(' ');
 }
 
 
