@@ -10,14 +10,16 @@ function maxChar(str) {
     const stringApp = {};
     const strChars = str.split('');
     
+    // map object with frequency of chars
     for (let char of strChars) {
-        if (stringApp[char] === undefined) {
+        if (!stringApp[char]) {
             stringApp[char] = 1; 
         } else {
             stringApp[char]++; 
         }
     }
     
+    // iterate of mapped char object, and push char with highest occurence 
     for (let prop in stringApp) {
         if (stringApp[prop] > returnObj.value) {
             returnObj.key = prop;
